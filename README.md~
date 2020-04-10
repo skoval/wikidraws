@@ -1,0 +1,6 @@
+As part of the [Wikipedia's  Grand Slam Project](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Tennis/Grand_Slam_Project), Wiki editors have collect the draws from all Grand Slam events from the pre-Open Era up to the present. 
+
+The `wikidraws` repository is an R package for scraping the box scores from the Grand Slam draws documented by Wikipedia. The goal is to make it easy to collect the match results and look up records, do interesting analyses, etc.
+
+In addition to the tools for scraping and tidying, the repo has a CSV folder with CSV files of the data that I have collected and reviewed so far.
+

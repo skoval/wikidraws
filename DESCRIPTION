@@ -1,0 +1,16 @@
+Package: wikidraws
+Type: Package
+Title: Scraping Grand Slam draws from Wikipedia
+Version: 0.1
+Encoding: latin1
+Date: 2020-04-01
+Author: Stephanie Kovalchik
+Maintainer: Stephanie Kovalchik <s.a.kovalchik@gmail.com>
+Description: Tools for extracting pre- and open-era Grand Slam draws
+Depends:
+    R (>= 2.10),
+    dplyr,
+    stringr,
+    rvest
+License: GPL-2
+RoxygenNote: 7.0.2
