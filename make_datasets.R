@@ -22,7 +22,7 @@ irregularities <- irregularities %>%
 usopen_players <- collect_players(urls)
 
 ## Draws
-usopen <- collect_draws(urls[60:length(urls)])
+usopen <- collect_draws(urls)
 
 
 ## Save results
