@@ -24,8 +24,8 @@ collect_players <- function(urls){
 	x <- do.call("rbind", lapply(urls, collate_tables))
 	
 x %>% 
-	filter(!is.na(player_page), !is.na(name), name != "Bye") %>%
-	rename(player = name) %>%
+	dplyr::filter(!is.na(player_page), !is.na(name), name != "Bye") %>%
+	dplyr::rename(player = name) %>%
 	unique()  
 }
 

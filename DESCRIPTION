@@ -7,10 +7,7 @@ Date: 2020-04-01
 Author: Stephanie Kovalchik
 Maintainer: Stephanie Kovalchik <s.a.kovalchik@gmail.com>
 Description: Tools for extracting pre- and open-era Grand Slam draws
-Depends:
-    R (>= 2.10),
-    dplyr,
-    stringr,
-    rvest
+Depends: rvest, stringr, R (>= 2.10)
+Imports: dplyr
 License: GPL-2
 RoxygenNote: 7.0.2

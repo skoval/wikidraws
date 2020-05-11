@@ -24,6 +24,8 @@ read_events <- function(url = "https://en.wikipedia.org/wiki/Wikipedia:WikiProje
 		stringsAsFactors = F
 	)
 	
+	draws$links <- sub("-", "%E2%80%93", draws$links)
+	
 	draws$tournament <- 
 	ifelse(grepl("Wimbledon", draws$title), "Wimbledon",
 			ifelse(grepl("Austral", draws$title), "Australian Open", 
@@ -32,9 +34,7 @@ read_events <- function(url = "https://en.wikipedia.org/wiki/Wikipedia:WikiProje
 	draws$year <- sub("([0-9][0-9][0-9][0-9])(.*)", "\\1", draws$title)
 	draws$event <- ifelse(grepl("Men", draws$title), "Men", "Women")
 	
-	draws$links[draws$links == "/wiki/1915_U.S._National_Championships_-_Men%27s_Singles"] <- "/wiki/1916_U.S._National_Championships_%E2%80%93_Men%27s_Singles"
-	
-	draws$links[draws$links == "/wiki/2018_US_Open_-_Men%27s_Singles"] <- "/wiki/2018_US_Open_%E2%80%93_Men%27s_Singles"
+	draws$links[draws$links == "/wiki/1946_French_Championships_%E2%80%93_Men%27s_Singles"] <- NA
 	
 draws
 }

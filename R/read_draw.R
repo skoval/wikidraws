@@ -9,7 +9,9 @@ read_draw <- function(url){
 	collate_tables <- function(tables){
 		
 		tables <- do.call("rbind", lapply(1:length(tables), function(x) {	
+
 			draw <- read_round_table(tables[[x]], tablenum = x, url)
+			draw$round <- as.character(draw$round)
 			draw$match <- draw$match + x * 100 # Make unique match
 			draw
 			})
@@ -20,14 +22,23 @@ read_draw <- function(url){
 
 	tables <- read_tables(url)
 	
-	tables <- collate_tables(tables)
+	tables <- collate_tables(tables)	
+	
+	minmax <- c(min(tables$set, na.rm = T), max(tables$set, na.rm = T))
+	
+	tables$set <- factor(tables$set, levels = minmax[1]:minmax[2])
+	
+	tables <- tables %>%
+		tidyr::complete(set, tidyr::nesting(round, match, player), 
+		fill = list(gameswon = NA)) %>%
+		dplyr::arrange(round, match, player, set)
 	
 	# Create match order
 	tables <- tables %>%
-		arrange(match) %>%
-		group_by(round) %>%
+		dplyr::arrange(match) %>%
+		dplyr::group_by(round) %>%
 		dplyr::mutate(
-			match = rep(1:n_distinct(match), each = n()/n_distinct(match))
+			match = rep(1:dplyr::n_distinct(match), each = dplyr::n()/dplyr::n_distinct(match))
 		)
 
 tables
