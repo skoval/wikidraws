@@ -578,7 +578,8 @@ irregular_round_table <- function(results, rounds, table, url){
 			(url == "https://en.wikipedia.org//wiki/1921_U.S._National_Championships_%E2%80%93_Men%27s_Singles" & table == 3) |
 			(url == "https://en.wikipedia.org//wiki/1961_Australian_Championships_%E2%80%93_Men%27s_Singles" & table == 3) |
 			(url == "https://en.wikipedia.org//wiki/1967_Australian_Championships_%E2%80%93_Men%27s_Singles" & table == 2) |
-			(url == "https://en.wikipedia.org//wiki/1967_French_Championships_%E2%80%93_Men%27s_Singles" & table == 2) | (url == "https://en.wikipedia.org//wiki/1903_Wimbledon_Championships_%E2%80%93_Ladies%27_Singles" & table == 2) | (url == "https://en.wikipedia.org//wiki/1919_Wimbledon_Championships_%E2%80%93_Women%27s_Singles" & table == 4) |
+			(url == "https://en.wikipedia.org//wiki/1967_French_Championships_%E2%80%93_Men%27s_Singles" & table == 2) | 
+			(url == "https://en.wikipedia.org//wiki/1903_Wimbledon_Championships_%E2%80%93_Ladies%27_Singles" & table == 2) | (url == "https://en.wikipedia.org//wiki/1919_Wimbledon_Championships_%E2%80%93_Women%27s_Singles" & table == 4) |
 			(url == "https://en.wikipedia.org//wiki/1928_French_Championships_%E2%80%93_Women%27s_Singles" & table == 3) | 
 			(url == "https://en.wikipedia.org//wiki/1935_French_Championships_%E2%80%93_Women%27s_Singles" & table == 3) |
 			(url == "https://en.wikipedia.org//wiki/1937_French_Championships_%E2%80%93_Women%27s_Singles" & table == 3) |
