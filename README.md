@@ -4,11 +4,11 @@ The `wikidraws` repository is an R package for scraping the box scores from the 
 
 In addition to the tools for scraping and tidying, the repo has a CSV folder with CSV files of the data that I have collected and reviewed so far. You can also access the same info as data objects in the package. Each Grand Slam is a separate dataset. For example, to see the men's and women's singles draws for all historical Wimbledon events thru 2019, you would do the following:
 
-`
+```R
 library(wikidraws)
 
 data(wimbledon)
-`
+```
 
 If you want to do any scraping, the `collect_draws` would be the function to get started with.
 
