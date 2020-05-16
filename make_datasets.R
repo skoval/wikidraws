@@ -1,7 +1,7 @@
 library(wikidraws)
 
-savedir <- "~/Software/wikidraws/data/" # Set location for storing datasets
-csv_savedir <- "~/Software/wikidraws/csv/" # Set location for storing datasets
+savedir <- "" # Set location for storing datasets
+csv_savedir <- "" # Set location for storing datasets
 baseurl <- "https://en.wikipedia.org"
 
 slams <- read_events() # Men's and women's singles slam event pages
@@ -11,7 +11,7 @@ slams <- slams %>%
 	
 urls <- file.path(baseurl, slams$links)
 
-#irregularities <- do.call("rbind", lapply(urls, read_irregularities))	 
+irregularities <- do.call("rbind", lapply(urls, read_irregularities))	 
 
 ## WIMBLEDON
 wimbledon_urls <- file.path(baseurl, slams$links[slams$tournament == "Wimbledon"])
